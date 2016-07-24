@@ -4,6 +4,7 @@ using System.Collections;
 public class BallSpawner : MonoBehaviour {
 
     public GameObject prefab;
+    public CameraAim aimComponent;
 
 	// Use this for initialization
 	void Start () {
@@ -14,7 +15,9 @@ public class BallSpawner : MonoBehaviour {
         bool mouseDown = Input.GetMouseButtonDown(0);
         if (mouseDown)
         {
-            Instantiate(prefab, transform.position, transform.rotation);
+            Ray aimRay = aimComponent.GetAimRay();
+            Quaternion aimRotation = Quaternion.LookRotation(aimRay.direction);
+            Instantiate(prefab, transform.position, aimRotation);
         }
     }
 }
