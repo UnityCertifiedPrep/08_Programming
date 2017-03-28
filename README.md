@@ -85,7 +85,7 @@
 ### Improving Gameplay ###
 
 + Adding a goal to our game.
-+ I challenge **you **to improve the gameplay!
++ I challenge **you** to improve the gameplay!
 
 ---
 Find out more about our [Unity Certification Preparation Course](https://www.udemy.com/unitycert?couponCode=GitHubDiscount).
